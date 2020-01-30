@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}">
 	<head>
-		<meta charset="gbk">
+		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		{% seo %}
 		<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -13,7 +13,7 @@
 			<div class="inner">
 
 				<header>
-					<h1>{{ default: site.title | default: site.github.repository_name }}</h1>
+					<h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
 					<h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 				</header>
 				<hr>
