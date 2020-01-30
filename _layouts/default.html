@@ -15,13 +15,6 @@
 	<h1>{{ site.title | default: site.github.repository_name }}</h1> 
 	<p>{{ page.description | default: site.description }}</p>
 	{{ content }}
-	
-	ddd
-	{% for post in site.posts %}
-		111
-		{{ post.url }}
-		{{ post.title }}
-	{% endfor %}
     
     <footer>
       <p>{{ site.copyright | default: "copyright not found in _config.yml" }}</p>

@@ -1,5 +1,4 @@
 ---
-layout: index
 title: github 博客笔记
 ---
 
