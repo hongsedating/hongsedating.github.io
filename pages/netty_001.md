@@ -1,9 +1,7 @@
 ---
-description: Game Engine Developer & Independent Game and App Maker
-lang: en
+layout: default
+title: netty源码中精巧的代码
 ---
-
-
 （1）
 异常；正确使用java内置的异常类；字符串不为空验证；
 if (key == null) {
