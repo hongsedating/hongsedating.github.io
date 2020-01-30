@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: netty源码中精巧的代码
 ---
 （1）
