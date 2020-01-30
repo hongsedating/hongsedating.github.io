@@ -1,3 +1,8 @@
+---
+layout: index
+title: github 博客笔记
+---
+
 # 为自由，为爱我的人
 
 ## 学习笔记
