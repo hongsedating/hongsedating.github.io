@@ -1,0 +1,86 @@
+---
+description: Game Engine Developer & Independent Game and App Maker
+lang: en
+---
+
+
+（1）
+异常；正确使用java内置的异常类；字符串不为空验证；
+if (key == null) {
+	throw new NullPointerException("key");
+}
+if (key.isEmpty()) {
+	throw new IllegalArgumentException("key must not be empty.");
+}
+
+（2）
+系统属性；安全管理；
+String value = null;
+try {
+	if (System.getSecurityManager() == null) {
+		value = System.getProperty(key);
+	} else {
+		value = AccessController.doPrivileged(new PrivilegedAction<String>() {
+			@Override
+			public String run() {
+				return System.getProperty(key);
+			}
+		});
+	}
+} catch (SecurityException e) {
+	logger.warn("Unable to retrieve a system property '{}'; default values will be used.", key, e);
+}
+@TODO：注：关于安全管理需要进一步学习，暂时先跳过
+
+（3）
+不定参数；父类方法传不定参数，并由子类实现
+父类
+protected MultithreadEventLoopGroup(int nThreads, Executor executor, Object... args) {
+	super(nThreads == 0 ? DEFAULT_EVENT_LOOP_THREADS : nThreads, executor, args);
+}
+子类
+public NioEventLoopGroup(int nThreads, Executor executor, final SelectorProvider selectorProvider,
+						 final SelectStrategyFactory selectStrategyFactory) {
+	super(nThreads, executor, selectorProvider, selectStrategyFactory, RejectedExecutionHandlers.reject());
+}
+
+（4）
+@TODO JDK 的 ThreadFactory是干什么的
+ThreadGroup
+线程优先级
+
+
+（5）
+我们知道工具类中的方法一般是静态方法，如下创建了一个工具类MyUtil：
+package com.tpf;
+
+public class MyUtil {
+    public static void a1(){
+        System.out.println("a1");
+    }
+    
+    public static void a2(){
+        System.out.println("a2");
+    }
+}
+
+如果其他类使用工具类的静态方法，一般是这样使用：
+public class Demo1 {
+    public static void main(String[] args) {
+        MyUtil.a1();
+        MyUtil.a2();
+    }
+}
+你会发现，在使用MyUtil的静态方法时，总是需要写MyUtil.，貌似不优雅，那有没有优雅的方式呢？有，如下：
+import static com.tpf.MyUtil.a1;
+import static com.tpf.MyUtil.a2;
+
+public class Demo2 {
+    public static void main(String[] args) {
+        a1();
+        a2();
+    }
+}
+另外，import还可以简化为
+import static com.tpf.MyUtil.*;
+只不过，这种会引入所有的方法，如果本类中有同名方法，需注意。
