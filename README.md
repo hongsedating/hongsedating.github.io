@@ -3,7 +3,7 @@ layout: index
 title: github 博客笔记
 ---
 
-# 为自由，为爱我的人
+# For freedom, for those who love me
 
 ## 学习笔记
 * github md语法
