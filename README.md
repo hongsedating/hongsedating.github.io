@@ -1,7 +1,3 @@
----
-title: github 博客笔记
----
-
 # For freedom, for those who love me
 
 ## 学习笔记
