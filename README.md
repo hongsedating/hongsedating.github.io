@@ -1,8 +1,3 @@
----
-layout: default
-title: github 博客
----
-
 ## 学习笔记
 * github md语法
 
