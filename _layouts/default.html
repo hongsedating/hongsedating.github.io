@@ -1,25 +1,23 @@
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		{% seo %}
+		<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	</head>
+	
+	<body>
+		<h1>{{ site.title | default: site.github.repository_name }}</h1> 
+		<p>{{ page.description | default: site.description }}</p>
+		<section>
+			{{ content }}
+		</section>
 
-    {% seo %}
-
-    <link rel="icon" href="https://avatars0.githubusercontent.com/u/1797320" type="image/x-icon" title="TPF">
-	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    
-  </head>
-  <body>
-	<h1>{{ site.title | default: site.github.repository_name }}</h1> 
-	<p>{{ page.description | default: site.description }}</p>
-	{{ content }}
-    
-    <footer>
-      <p>{{ site.copyright | default: "copyright not found in _config.yml" }}</p>
-    </footer>
-    
-  </body>
+		<footer>
+			<p>{{ site.copyright | default: "copyright not found in _config.yml" }}</p>
+		</footer>
+	</body>
 
 </html>

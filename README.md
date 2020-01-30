@@ -1,9 +1,12 @@
-# For freedom, for those who love me
+---
+layout: default
+title: github 博客
+---
 
 ## 学习笔记
 * github md语法
 
 ## 读源码
 * netty
-  * [优雅的编码技巧](https://www.baidu.com)
+  * [优雅的编码技巧](/2020/01/30/netty-001.html)
   
