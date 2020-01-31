@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 老K的博客
 ---
 
 ## 学习笔记
