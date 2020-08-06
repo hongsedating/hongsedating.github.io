@@ -1,0 +1,14 @@
+*/bin/
+*/build/
+*/.settings/
+*/.project
+*/.classpath
+*/.gitignore
+**/.idea/*
+*.iml
+/out
+target/
+**/Thumbs.db
+**/Thumbs.db:encryptable
+**/classes/*
+
